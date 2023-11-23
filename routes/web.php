@@ -4,6 +4,7 @@ use App\Models\Post;
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PostController;
+use App\Http\Controllers\UserController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -39,4 +40,5 @@ Route::get('/blog ',[PostController::class,'index']);
 // });
 
 Route::get('/blog/{id}',[PostController::class, 'show']);
-
+Route::get('/login ',[UserController::class,'index']);
+Route::get('/register ',[UserController::class,'register']);
