@@ -42,3 +42,4 @@ Route::get('/blog ',[PostController::class,'index']);
 Route::get('/blog/{id}',[PostController::class, 'show']);
 Route::get('/login ',[UserController::class,'index']);
 Route::get('/register ',[UserController::class,'register']);
+Route::post('/register ',[UserController::class,'store']);
