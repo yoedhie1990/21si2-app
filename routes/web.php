@@ -45,3 +45,5 @@ Route::get('/login ',[UserController::class,'index']);
 Route::get('/register ',[UserController::class,'register']);
 Route::post('/register ',[UserController::class,'store']);
 Route::get('/admin/dashboard ',[AdminController::class,'index']);
+Route::get('/admin/posts ',[AdminController::class,'daftar_posts']);
+Route::get('/admin/posts/tambah ',[AdminController::class,'tambah_posts']);
