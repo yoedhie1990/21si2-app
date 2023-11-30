@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\User;
+use Illuminate\Support\Facades\Hash;
 
 class UserController extends Controller
 {
@@ -26,6 +27,9 @@ class UserController extends Controller
             'email'=> ['unique:users,email'],
             'password'=> 'required'
         ]);
+
+        $data['password'] = Hash::make($data['password']);
+
         User::create($data);
 
         $request->session()->flash('success','Pendaftaran Berhasil');
