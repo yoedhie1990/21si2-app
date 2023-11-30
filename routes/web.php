@@ -5,6 +5,7 @@ use App\Models\Post;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PostController;
 use App\Http\Controllers\UserController;
+use App\Http\Controllers\AdminController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -43,3 +44,4 @@ Route::get('/blog/{id}',[PostController::class, 'show']);
 Route::get('/login ',[UserController::class,'index']);
 Route::get('/register ',[UserController::class,'register']);
 Route::post('/register ',[UserController::class,'store']);
+Route::get('/admin/dashboard ',[AdminController::class,'index']);
